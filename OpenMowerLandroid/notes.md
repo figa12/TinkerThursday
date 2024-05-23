@@ -1,5 +1,22 @@
 # Notes / Journal
 
+Plan for næste gang: Find ud af hvad pinouts på motor er. Bekræft om de er kompatible med xESC (2 mini?) motor controller.
+
+Find ud af om det giver mening at købe dem af ham, eller at bestille dem på PCBWay.
+
+Virker den xESC controller uden CAN chippen?
+
+
+"    2. xESCs are flashed with latest firmware and app/motor configuration was uploaded.
+
+    3. ⚠️ Central xESC (mower) is different from left/right xESC (wheels), don’t mix them
+"
+
+Why is it different?
+
+
+Lav et budget / shopping list
+
 ## Dimensions
 OG: 170x180
 
