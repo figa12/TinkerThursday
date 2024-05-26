@@ -46,5 +46,7 @@ Buy a crimp tool.
 
 4 New screws for battery box.
 
+Hvordan virker charging? Kan den nuværende basestation genbruges?
+
 # Resources
 Landroid-Board: BLDC Motor Controller: https://www.onsemi.com/pdf/datasheet/mc33035-d.pdf
