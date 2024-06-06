@@ -2,42 +2,52 @@
 
 OpenMower on the Worx Landroid WR105SI.
 
-Plan for næste gang: Find ud af hvad pinouts på motor er. Bekræft om de er kompatible med xESC (2 mini?) motor controller.
+## Budget / shopping list
 
-Find ud af om det giver mening at købe dem af ham, eller at bestille dem på PCBWay.
+Check Vermuts shop for parts we need:
 
-Virker den xESC controller uden CAN chippen?
-
-
-"    2. xESCs are flashed with latest firmware and app/motor configuration was uploaded.
-
-    3. ⚠️ Central xESC (mower) is different from left/right xESC (wheels), don’t mix them
-"
-
-Why is it different?
-
-
-Lav et budget / shopping list
+https://shop.devops.care/openmower/29-openmower-012x-assembled-board.html
 
 ## Dimensions
 OG: 170x180
 
 Landroid (Box): 120x190
 
-## Motor
-The wheels are powered by Brushless DC (BLDC) motors. It seems that the pinouts are as follows:
+## Motors
+
+The wheels are powered by Brushless DC (BLDC) motors. 
+
+### Hall effect sensor order test
+
+Tested on right side motor with 5V on hall effect sensor:
+
+- Forward direction: white, blue, green
+- Backward direction: green, blue, white
+
+Left side motor: 
+
+- Forward direction: green, blue, white
+- Backward direction: white, blue, green
+
+### Motor phase test
+
+Test with power supply on left side motor: B-G to G-W => forward
+
+### Pinout
+
+In conclusion, it seems that the pinouts are as follows:
 
 Power Phases:
 
-    U (Phase A): Color unknown
-    V (Phase B): Color unknown
-    W (Phase C): Color unknown
+    U (Phase A): White
+    V (Phase B): Blue
+    W (Phase C): Green
 
-Hall Sensors:
+Hall Effect Sensors:
 
-    Hall Sensor 1: Color unknown
-    Hall Sensor 2: Color unknown
-    Hall Sensor 3: Color unknown
+    Hall Sensor U/A: White
+    Hall Sensor V/B: Blue
+    Hall Sensor W/C: Green
     Hall Power (+5V): Red
     Hall Ground (GND): Black
 
@@ -62,13 +72,26 @@ Status 1/6-24:
 
 Next tasks:
 
-- Mounting holes:
-  - Can we use existing mounting used by original Landroid motherboard box?
-  - If no: align mounting holes between PCB and new mainboard box, design new mainboard box to support existing Landroid mounting.
-- Fit check: print board outline in 1:1 on A4, check
-- Fit check: final height needed for motherboard? Will this be an issue?
-- Any production parameters we should worry about? Like board thickness, copper weight, via covering, ...
-- Fiducials: moved some around, where should they be?
+- [ ] Mounting holes:
+  - Drop mounting holes, click into box
+- [X] ~~Fit check: print board outline in 1:1 on A4, check~~ OK
+- [X] Fit check: final height needed for motherboard? Will this be an issue?
+  - Seems to be something like 5cm clearance between bottom and top shield. Components on the mainboard seem to be at most 2cm high. Need some clearance for wires on connectors
+- [ ] Any production parameters we should worry about? Like board thickness, copper weight, via covering, ...
+- [ ] Fiducials: moved some around, where should they be?
+- [ ] Get quote from JLC PCB incl components
+- [ ] Seems like two speaker pin headers are supposed to fit DFPlayer Mini MP3 Player: https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
+
+## Motor controllers
+
+Buy complete or produce ourselves?
+
+BOM: https://octopart.com/bom-tool/WcUXLmRi
+
+- [ ] Get quote from JLC PCB (or others) incl components
+- [ ] Do we need the CAN chip mounted?
+- [ ] Why is the center motor controller different from the two others?
+  - https://shop.devops.care/openmower/29-openmower-012x-assembled-board.html 
 
 ## New mainboard box
 
@@ -77,17 +100,30 @@ Need to design a box for the reshaped mainboard.
 - Ensure mounting holes fit somewhere we can place a screw in the Landroid
 - How weather resilient must the new box be? Original Landroid motherboard is protected by epoxy, but connectors and motors etc are not particularly protected.
 
+Plan:
+
+- [ ] Design baseplate for mounting mainboard
+- [ ] Do test 3D print, fit check incl height
+- [ ] Box
+
+## Charger
+
+- [ ] How does it work? Can we reuse the old basestation?
+- [ ] Why does the old charger not work?
+
 ## GPS antenna mounting
 
 Where? How?
 
-# TODO
+## Wires and connectors
 
-Buy a crimp tool.
+Crimps, connectors, wire lengths, ...
 
-4 New screws for battery box.
+# Other TODOs
 
-Hvordan virker charging? Kan den nuværende basestation genbruges?
+- Buy a crimp tool.
+- 4 New screws for battery box.
 
 # Resources
 Landroid-Board: BLDC Motor Controller: https://www.onsemi.com/pdf/datasheet/mc33035-d.pdf
+NXP application note on BLDC motor control with hall effect sensors: https://www.nxp.com/docs/en/application-note/AN4413.pdf
