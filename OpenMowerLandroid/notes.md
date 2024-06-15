@@ -109,7 +109,10 @@ Plan:
 ## Charger
 
 - [ ] How does it work? Can we reuse the old basestation?
+  - [ ] Battery voltage/type in OG OpenMower vs OG Landroid?
 - [ ] Why does the old charger not work?
+
+OpenMower uses cheap china DC-DC converter, XL4016. Some issues [reported](https://discord.com/channels/958476543846412329/961803746399101008/1209589195589423214) on [discord](https://discord.com/channels/958476543846412329/961803746399101008/1250042767137308784) with random devices from ebay/aliexpress. [Suggestion](https://discord.com/channels/958476543846412329/961803746399101008/1250706216867332207) is to buy from AZDelivery on Amazon.
 
 ## GPS antenna mounting
 
