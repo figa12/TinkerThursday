@@ -72,15 +72,16 @@ Status 1/6-24:
 
 Next tasks:
 
-- [ ] Mounting holes:
-  - Drop mounting holes, click into box
-- [X] ~~Fit check: print board outline in 1:1 on A4, check~~ OK
-- [X] Fit check: final height needed for motherboard? Will this be an issue?
+- [x] Mounting holes: Drop mounting holes, will "click" PCB into box
+- [x] Fit check: print board outline in 1:1 on A4, check -- OK, looks good
+- [x] Fit check: final height needed for motherboard? Will this be an issue?
   - Seems to be something like 5cm clearance between bottom and top shield. Components on the mainboard seem to be at most 2cm high. Need some clearance for wires on connectors
 - [ ] Any production parameters we should worry about? Like board thickness, copper weight, via covering, ...
 - [ ] Fiducials: moved some around, where should they be?
 - [ ] Get quote from JLC PCB incl components
-- [ ] Seems like two speaker pin headers are supposed to fit DFPlayer Mini MP3 Player: https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
+- [x] Seems like two speaker pin headers are supposed to fit DFPlayer Mini MP3 Player: https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
+- [ ] TODO: rephrase: Will the IMU fit in the header now?
+- [ ] TODO: rephrase: Any other pin headers etc that have been moved that have dependencies I've ignored?
 
 ## Motor controllers
 
