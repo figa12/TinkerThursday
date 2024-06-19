@@ -79,9 +79,12 @@ Next tasks:
 - [ ] Any production parameters we should worry about? Like board thickness, copper weight, via covering, ...
 - [ ] Fiducials: moved some around, where should they be?
 - [ ] Get quote from JLC PCB incl components
+  - Almost all components are registered as "extended components", which means +2.8 EUR per part, bringing the price way up. Looks like many of these are for standard components, so this can probably be resolved by going part by part and using some that are in the JLC PCB library. Perhaps the OG part selection is based on PCBWays library?
 - [x] Seems like two speaker pin headers are supposed to fit DFPlayer Mini MP3 Player: https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
-- [ ] TODO: rephrase: Will the IMU fit in the header now?
-- [ ] TODO: rephrase: Any other pin headers etc that have been moved that have dependencies I've ignored?
+- [x] What about the IMU pin header?
+  - IMU is a small SMD IC. The pin header seems to be for debugging or something...
+- [ ] Any other pin headers etc that have been moved that have dependencies I've ignored?
+  - [ ] Looks like the IMU and speaker pin headers might be a bit close for no reason. Could shift that a bit.
 
 ## Motor controllers
 
@@ -90,7 +93,8 @@ Buy complete or produce ourselves?
 BOM: https://octopart.com/bom-tool/WcUXLmRi
 
 - [ ] Get quote from JLC PCB (or others) incl components
-- [ ] Do we need the CAN chip mounted?
+- [x] Do we need the CAN chip mounted?
+  - No, the CAN chip is not in use on the OG OpenMower mainboard.
 - [ ] Why is the center motor controller different from the two others?
   - https://shop.devops.care/openmower/29-openmower-012x-assembled-board.html 
 
@@ -113,7 +117,7 @@ Plan:
   - [ ] Battery voltage/type in OG OpenMower vs OG Landroid?
 - [ ] Why does the old charger not work?
 
-OpenMower uses cheap china DC-DC converter, XL4016. Some issues [reported](https://discord.com/channels/958476543846412329/961803746399101008/1209589195589423214) on [discord](https://discord.com/channels/958476543846412329/961803746399101008/1250042767137308784) with random devices from ebay/aliexpress. [Suggestion](https://discord.com/channels/958476543846412329/961803746399101008/1250706216867332207) is to buy from AZDelivery on Amazon.
+OpenMower uses cheap china DC-DC converter, XL4016. Some issues [reported](https://discord.com/channels/958476543846412329/961803746399101008/1209589195589423214) on [discord](https://discord.com/channels/958476543846412329/961803746399101008/1250042767137308784) with random devices from ebay/aliexpress. [Suggestion](https://discord.com/channels/958476543846412329/961803746399101008/1250706216867332207) is to buy from AZDelivery [on Amazon](https://www.amazon.de/gp/aw/d/B086W79QQ8).
 
 ## GPS antenna mounting
 
