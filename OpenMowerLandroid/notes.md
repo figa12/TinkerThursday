@@ -135,3 +135,4 @@ Crimps, connectors, wire lengths, ...
 # Resources
 Landroid-Board: BLDC Motor Controller: https://www.onsemi.com/pdf/datasheet/mc33035-d.pdf
 NXP application note on BLDC motor control with hall effect sensors: https://www.nxp.com/docs/en/application-note/AN4413.pdf
+RTK: https://www.ardusimple.com/rtk-explained/
