@@ -97,7 +97,8 @@ BOM: https://octopart.com/bom-tool/WcUXLmRi
 - [x] Do we need the CAN chip mounted?
   - No, the CAN chip is not in use on the OG OpenMower mainboard.
 - [ ] Why is the center motor controller different from the two others?
-  - https://shop.devops.care/openmower/29-openmower-012x-assembled-board.html 
+  - https://shop.devops.care/openmower/29-openmower-012x-assembled-board.html
+  - Different configuration: https://openmower.de/docs/knowledge-base/configure-xesc/
 
 ## New mainboard box
 
