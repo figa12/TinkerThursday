@@ -85,6 +85,7 @@ Next tasks:
   - IMU is a small SMD IC. The pin header seems to be for debugging or something...
 - [ ] Any other pin headers etc that have been moved that have dependencies I've ignored?
   - [ ] Looks like the IMU and speaker pin headers might be a bit close for no reason. Could shift that a bit.
+- [ ] What are the implications on the OpenMower mainboard which expects 28 V Vbatt, when the Landroid batteries are 20 V
 
 ## Motor controllers
 
@@ -114,10 +115,20 @@ Plan:
 ## Charger
 
 - [ ] How does it work? Can we reuse the old basestation?
-  - [ ] Battery voltage/type in OG OpenMower vs OG Landroid?
+  - [x] Battery voltage/type in OG OpenMower vs OG Landroid?
+    - OG OpenMower: 28 V Li-Ion, DC-DC converter set at 29.2 V. So probably 7 cells charged to approx 4.2 V
+    - Landroid: 20 V Li-Ion, 5 cells. So each cell charged to approx 4.2 V that's 21 V. 
 - [ ] Why does the old charger not work?
+- [ ] Battery connector is different and has fewer connections
+- [ ] Charger voltage sense is dimensioned for 28 V battery, not 20 V
 
 OpenMower uses cheap china DC-DC converter, XL4016. Some issues [reported](https://discord.com/channels/958476543846412329/961803746399101008/1209589195589423214) on [discord](https://discord.com/channels/958476543846412329/961803746399101008/1250042767137308784) with random devices from ebay/aliexpress. [Suggestion](https://discord.com/channels/958476543846412329/961803746399101008/1250706216867332207) is to buy from AZDelivery [on Amazon](https://www.amazon.de/gp/aw/d/B086W79QQ8).
+
+Judging from the robot-to-battery connector J2, the OG OpenMower battery pack seems to have some logic, probably disabling an output when charging. The mainboard seems to switch between using the battery voltage and the charger voltage. The Landroid battery pack only has V+, GND, T and BS. Q: can we just ignore this switching logic and always use V+ from the batteries, even if we're charging? Ask on discord and get some input.
+
+Landroid battery teardown: https://www.roboter-forum.com/threads/worx-landroid-wa3230-battery-pack-disassembly.21636/
+
+Charger current sense resistor etc. is dimensioned for 28 V. We need to adjust this sense voltage to match the reduced battery voltage.
 
 ## GPS antenna mounting
 
