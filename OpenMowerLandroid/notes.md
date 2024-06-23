@@ -72,10 +72,13 @@ Status 1/6-24:
 
 Status 23/06-24:
 
-- Mainboard schematic updated for Landroid battery instead of more advanced Yardforce battery pack. NOTE: connector pinout must be updated, I just took a guess
+- Mainboard schematic update started for Landroid battery instead of more advanced Yardforce battery pack
+- NOTE: connector footprint must be updated, just used an equivalent molex for now. The housing on the battery is actually the [JST VLP-04V](https://www.jst-mfg.com/product/pdf/eng/eVL1.pdf). More models on [JSTs website](https://www.jst-mfg.com/product/index.php?series=264)
+  - The battery pinout is 1: BS (yellow), 2: B+ (red), 3: GND (black), 4: T (blue)
 
 ![mainboard-landroid-battery](photos/mainboard-landroid-battery.png)
 ![mainboard-landroid-battery-3d](photos/reshaped-mainboard-240623.png)
+![landroid-battery](photos/PXL_20240623_160326608.jpg)
 
 Next tasks:
 
@@ -95,7 +98,7 @@ Next tasks:
 - [x] What are the implications on the OpenMower mainboard which expects 28 V Vbatt, when the Landroid batteries are 20 V
   - Need to update charge stop threshold, but otherwise seems this should be fine: xESC2 doesnt care, Landroid motors are 20 V, voltage converter supports much lower voltage
 - [ ] Any connectors that should be different with the Landroid? E.g. motors, battery, .. Probably need some longer wires anyway?
-  - Landroid battery seems to be a 2x2 Molex MiniFit Jr., same family as those used by OpenMower. But distance from battery to connector is way too long for original Landroid battery cable, isn't it?
+  - [ ] Landroid battery seems to be a JST VLP-04V. But distance from battery to connector is way too long for original Landroid battery cable... What to do?
 
 ## Motor controllers
 
