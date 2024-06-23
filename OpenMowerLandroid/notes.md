@@ -99,6 +99,8 @@ Next tasks:
   - Need to update charge stop threshold, but otherwise seems this should be fine: xESC2 doesnt care, Landroid motors are 20 V, voltage converter supports much lower voltage
 - [ ] Any connectors that should be different with the Landroid? E.g. motors, battery, .. Probably need some longer wires anyway?
   - [ ] Landroid battery seems to be a JST VLP-04V. But distance from battery to connector is way too long for original Landroid battery cable... What to do?
+  - [ ] Landroid stop sensor
+  - [ ] Landroid motor connectors
 
 ## Motor controllers
 
@@ -155,7 +157,8 @@ Crimps, connectors, wire lengths, ...
 
 # Other TODOs
 
-- Buy a crimp tool or two - Molex Minifit Jr. and JST-XH?
+- Buy a crimp tool or two - OG OpenMower seems to use Molex Minifit Jr. and JST-XH
+  - Maybe this kit for JST: https://www.amazon.de/-/en/gp/product/B09X111BK5
 - 4 New screws for battery box.
 
 # Resources
