@@ -132,6 +132,7 @@ Plan:
 - [ ] Why does the old charger not work?
 - [ ] Battery connector is different and has fewer connections
 - [ ] Charger voltage sense is dimensioned for 28 V battery, not 20 V
+- [ ] Seems feasible to make OpenMower DC-DC converter fit, but will require customized carrier board adjusted for the Landroid dock mounting holes
 
 OpenMower uses cheap china DC-DC converter, XL4016. Some issues [reported](https://discord.com/channels/958476543846412329/961803746399101008/1209589195589423214) on [discord](https://discord.com/channels/958476543846412329/961803746399101008/1250042767137308784) with random devices from ebay/aliexpress. [Suggestion](https://discord.com/channels/958476543846412329/961803746399101008/1250706216867332207) is to buy from AZDelivery [on Amazon](https://www.amazon.de/gp/aw/d/B086W79QQ8).
 
