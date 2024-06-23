@@ -70,6 +70,13 @@ Status 1/6-24:
 
 - Initial fit check seems promising. Did a slight resize in bottom mid to get some more freedom when placing the PCB in the Landroid.
 
+Status 23/06-24:
+
+- Mainboard schematic updated for Landroid battery instead of more advanced Yardforce battery pack. NOTE: connector pinout must be updated, I just took a guess
+
+![mainboard-landroid-battery](photos/mainboard-landroid-battery.png)
+![mainboard-landroid-battery-3d](photos/reshaped-mainboard-240623.png)
+
 Next tasks:
 
 - [x] Mounting holes: Drop mounting holes, will "click" PCB into box
@@ -85,7 +92,10 @@ Next tasks:
   - IMU is a small SMD IC. The pin header seems to be for debugging or something...
 - [ ] Any other pin headers etc that have been moved that have dependencies I've ignored?
   - [ ] Looks like the IMU and speaker pin headers might be a bit close for no reason. Could shift that a bit.
-- [ ] What are the implications on the OpenMower mainboard which expects 28 V Vbatt, when the Landroid batteries are 20 V
+- [x] What are the implications on the OpenMower mainboard which expects 28 V Vbatt, when the Landroid batteries are 20 V
+  - Need to update charge stop threshold, but otherwise seems this should be fine: xESC2 doesnt care, Landroid motors are 20 V, voltage converter supports much lower voltage
+- [ ] Any connectors that should be different with the Landroid? E.g. motors, battery, .. Probably need some longer wires anyway?
+  - Landroid battery seems to be a 2x2 Molex MiniFit Jr., same family as those used by OpenMower. But distance from battery to connector is way too long for original Landroid battery cable, isn't it?
 
 ## Motor controllers
 
@@ -141,7 +151,7 @@ Crimps, connectors, wire lengths, ...
 
 # Other TODOs
 
-- Buy a crimp tool.
+- Buy a crimp tool or two - Molex Minifit Jr. and JST-XH?
 - 4 New screws for battery box.
 
 # Resources
