@@ -1,0 +1,3 @@
+[submodule "OpenMowerLandroid/OpenMower"]
+	path = OpenMowerLandroid/OpenMower
+	url = git@github.com:tausen/OpenMower.git
