@@ -90,6 +90,9 @@ Next tasks:
 - [ ] Fiducials: moved some around, where should they be?
 - [ ] Get quote from JLC PCB incl components
   - Almost all components are registered as "extended components", which means +2.8 EUR per part, bringing the price way up. Looks like many of these are for standard components, so this can probably be resolved by going part by part and using some that are in the JLC PCB library. Perhaps the OG part selection is based on PCBWays library?
+  - D15,D16,D2,D3 switched to 40V 550 mV Schottky (was 450 mV) on JLC PCB order
+  - L1 switched to COILMX MS0630-4R7M on JLC PCB order
+  - R11 switched to 0805W8F5362T5E on JLC PCB order
 - [x] Seems like two speaker pin headers are supposed to fit DFPlayer Mini MP3 Player: https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
 - [x] What about the IMU pin header?
   - IMU is a small SMD IC. The pin header seems to be for debugging or something...
@@ -159,6 +162,9 @@ Crimps, connectors, wire lengths, ...
 
 - Buy a crimp tool or two - OG OpenMower seems to use Molex Minifit Jr. and JST-XH
   - Maybe this kit for JST: https://www.amazon.de/-/en/gp/product/B09X111BK5
+  - Elflein uses the SN-01BM in his assembly video: https://www.amazon.de/-/en/WEKESIGO-SN-01BM-Ratchet-AWG28-20-0-08-0-5mm%C2%B2/dp/B09ZB95NYW/
+  - A nice rundown of common connectors and crimp tools here: https://www.mattmillman.com/info/crimpconnectors/
+  - Ordered the Hozan P-707. Might consider getting the Engineer PAD-11 as well for small connectors, but let's see...
 - 4 New screws for battery box.
 
 # Resources
