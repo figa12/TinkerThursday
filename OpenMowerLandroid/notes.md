@@ -81,15 +81,6 @@ Status 23/06-24:
 ![mainboard-landroid-battery-3d](photos/reshaped-mainboard-240623.png)
 ![landroid-battery](photos/PXL_20240623_160326608.jpg)
 
-Battery plan: short wire w/ JST VLR-04V in one end and Molex Mini-Fit Jr. 5557 in the other to connect battery to mainboard (existing wire on battery is not long enough anyway). Candidates on farnell:
-
-- 4-way mini-fit: https://dk.farnell.com/molex/39-01-2045/connector-housing-rcpt-4pos-4/dp/1756657
-- 4-way mini-fit: https://dk.farnell.com/molex/39-01-2040/connector-housing-rcpt-4pos-4/dp/151867
-- 22-way mini-fit: https://dk.farnell.com/molex/39-01-2225/connector-housing-rcpt-22pos-4/dp/3050018
-- Mini-fit crimps: https://dk.farnell.com/molex/39-00-0078/crimp-skt-mini-fit-pk100/dp/9732675?MER=sy-me-pd-mi-acce
-- 4-way JST (image is wrong): https://dk.farnell.com/jst-japan-solderless-terminals/vlr-04v/connector-housing-r-4way/dp/7356331
-- JST crimp: https://dk.farnell.com/jst-japan-solderless-terminals/bvm-81t-p2-0/crimp-terminal-pin/dp/7356390?MER=sy-me-pd-mi-acce
-
 Next tasks:
 
 - [x] Mounting holes: Drop mounting holes, will "click" PCB into box
@@ -111,9 +102,28 @@ Next tasks:
 - [x] What are the implications on the OpenMower mainboard which expects 28 V Vbatt, when the Landroid batteries are 20 V
   - Need to update charge stop threshold, but otherwise seems this should be fine: xESC2 doesnt care, Landroid motors are 20 V, voltage converter supports much lower voltage
 - [ ] Any connectors that should be different with the Landroid? E.g. motors, battery, .. Probably need some longer wires anyway?
-  - [ ] Landroid battery seems to be a JST VLP-04V. But distance from battery to connector is way too long for original Landroid battery cable... What to do?
+  - [X] Landroid battery seems to be a JST VLP-04V. But distance from battery to connector is way too long for original Landroid battery cable... See [Connectors]
   - [ ] Landroid stop sensor
   - [ ] Landroid motor connectors
+
+## Connectors
+
+### Battery
+
+Landroid battery has a very short wire with a JST VLP-04V connector. The matching wire-to-wire connector is the JST VLR-04V. Make a cable extender/connector changer with JST VLR-04V in one end and Molex Mini-Fit Jr. 5557-04R in the other. Make sure PCB carries the Molex Mini-Fit Jr. 5566 (or another compatible header).
+
+On Farnell: 
+
+- [JST VLR-04V](https://dk.farnell.com/jst-japan-solderless-terminals/vlr-04v/connector-housing-r-4way/dp/7356331)
+- [JST crimps](https://dk.farnell.com/jst-japan-solderless-terminals/bvm-81t-p2-0/crimp-terminal-pin/dp/7356390?MER=sy-me-pd-mi-acce)
+- Molex Mini-Fit Jr. 5557-04R: [Molex 5557-04R](https://www.molex.com/en-us/products/part-detail/39012045), [Molex 5557-04R-210](https://www.molex.com/en-us/products/part-detail/39012045), [5557-04R on Farnell](https://dk.farnell.com/molex/39-01-2040/connector-housing-rcpt-4pos-4/dp/151867), [5557-04R-210 on Farnell](https://dk.farnell.com/molex/39-01-2045/connector-housing-rcpt-4pos-4/dp/1756657)
+- [Molex Mini-Fit Jr. crimps 16AWG](https://dk.farnell.com/molex/39-00-0078/crimp-skt-mini-fit-pk100/dp/9732675?MER=sy-me-pd-mi-acce)
+
+### Motors
+
+Landroid motors have a very short wire with some connector, probably some JST VLx? The Landroid mainboard has another short wire with a mating connector. Figure out the part number of that mating connector and make a wire with that in one end and the 22-way Molex Mini-Fit Jr. in the other (collecting all motor connections in that single huge connector).
+
+- Probably something like the 22-way Molex Mini-Fit Jr. 5557: [5557-22R](https://www.molex.com/en-us/products/part-detail/39012220), [5557-22R-210](https://www.molex.com/en-us/products/part-detail/39012225)  https://dk.farnell.com/molex/39-01-2225/connector-housing-rcpt-22pos-4/dp/3050018
 
 ## Motor controllers
 
