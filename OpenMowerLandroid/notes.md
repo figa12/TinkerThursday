@@ -75,10 +75,20 @@ Status 23/06-24:
 - Mainboard schematic update started for Landroid battery instead of more advanced Yardforce battery pack
 - NOTE: connector footprint must be updated, just used an equivalent molex for now. The housing on the battery is actually the [JST VLP-04V](https://www.jst-mfg.com/product/pdf/eng/eVL1.pdf). More models on [JSTs website](https://www.jst-mfg.com/product/index.php?series=264)
   - The battery pinout is 1: BS (yellow), 2: B+ (red), 3: GND (black), 4: T (blue)
+  - Double-checking a defective battery: 2: P+ (red), 3: P- (black)
 
 ![mainboard-landroid-battery](photos/mainboard-landroid-battery.png)
 ![mainboard-landroid-battery-3d](photos/reshaped-mainboard-240623.png)
 ![landroid-battery](photos/PXL_20240623_160326608.jpg)
+
+Battery plan: short wire w/ JST VLR-04V in one end and Molex Mini-Fit Jr. 5557 in the other to connect battery to mainboard (existing wire on battery is not long enough anyway). Candidates on farnell:
+
+- 4-way mini-fit: https://dk.farnell.com/molex/39-01-2045/connector-housing-rcpt-4pos-4/dp/1756657
+- 4-way mini-fit: https://dk.farnell.com/molex/39-01-2040/connector-housing-rcpt-4pos-4/dp/151867
+- 22-way mini-fit: https://dk.farnell.com/molex/39-01-2225/connector-housing-rcpt-22pos-4/dp/3050018
+- Mini-fit crimps: https://dk.farnell.com/molex/39-00-0078/crimp-skt-mini-fit-pk100/dp/9732675?MER=sy-me-pd-mi-acce
+- 4-way JST (image is wrong): https://dk.farnell.com/jst-japan-solderless-terminals/vlr-04v/connector-housing-r-4way/dp/7356331
+- JST crimp: https://dk.farnell.com/jst-japan-solderless-terminals/bvm-81t-p2-0/crimp-terminal-pin/dp/7356390?MER=sy-me-pd-mi-acce
 
 Next tasks:
 
