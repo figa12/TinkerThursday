@@ -8,6 +8,20 @@ Check Vermuts shop for parts we need:
 
 https://shop.devops.care/openmower/29-openmower-012x-assembled-board.html
 
+- M2.5 screws for mounting PCB in case
+- M2.5 nylon standoffs with screws for mounting Raspberry Pi 4
+  - Seems this should be either 10 mm or 12 mm
+- JST-XH terminals, crimps and housings
+- JST VLR-04V housings and crimps (see notes on battery connector)
+- Molex Mini-Fit Jr. terminals, housings and crimps  (see notes on battery connector)
+- 3 xESC controllers from Vermuts shop
+- Raspberry Pi 4
+- Raspberry Pi Pico
+- RTK GPS kit
+- CC/CV module for charger
+- SMA angle adapter for RTK GPS?
+- Wires
+
 ## Dimensions
 OG: 170x180
 
